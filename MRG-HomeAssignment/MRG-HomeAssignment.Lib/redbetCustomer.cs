@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MRG_HomeAssignment.Lib
 {
-    public class mrgreenCustomer
+    public class redbetCustomer
     {
         public string Firstname { get; set; }
 
@@ -18,6 +18,6 @@ namespace MRG_HomeAssignment.Lib
 
         public string City { get; set; }
 
-        public int PersonalNumber { get; set; }
+        public string FavoriteTeam { get; set; }
     }
 }
