@@ -20,6 +20,6 @@ namespace MRG_HomeAssignment.Lib.DomainClass
 
         public string City { get; set; }
 
-        public int PersonalNumber { get; set; }
+        public long PersonalNumber { get; set; }
     }
 }
