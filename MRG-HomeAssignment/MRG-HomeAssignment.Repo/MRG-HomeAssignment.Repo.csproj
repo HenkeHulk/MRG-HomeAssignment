@@ -41,7 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IEntityRepository.cs" />
+    <Compile Include="Interface\IMrgreenCustomerRepository.cs" />
+    <Compile Include="Interface\IRedBetCustomerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MRG-HomeAssignment.Lib\MRG-HomeAssignment.Lib.csproj">
+      <Project>{66cde28d-f552-4241-bb24-c2b8f08205e4}</Project>
+      <Name>MRG-HomeAssignment.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
