@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MRG_HomeAssignment.Lib
+namespace MRG_HomeAssignment.Lib.DomainClass
 {
-    public class redbetCustomer
+    public class mrgreenCustomer
     {
+        public int Id { get; set; }
+
         public string Firstname { get; set; }
 
         public string Lastname { get; set; }
@@ -18,6 +20,6 @@ namespace MRG_HomeAssignment.Lib
 
         public string City { get; set; }
 
-        public string FavoriteTeam { get; set; }
+        public int PersonalNumber { get; set; }
     }
 }

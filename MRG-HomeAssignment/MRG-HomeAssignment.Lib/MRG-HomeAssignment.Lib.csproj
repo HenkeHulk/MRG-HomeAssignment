@@ -48,9 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mrgreenCustomer.cs" />
+    <Compile Include="UserContext.cs" />
+    <Compile Include="DomainClass\mrgreenCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="redbetCustomer.cs" />
+    <Compile Include="DomainClass\redbetCustomer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
