@@ -12,8 +12,11 @@ namespace MRG_HomeAssignment.Repo.Repo
     public class RedbetCustomerRepo : IRedBetCustomerRepository
     {
         UserContext db = new UserContext();
+
+        //Returns list with all red bet customers
         public IQueryable<redbetCustomer> All => db.RedbetCustomers;
 
+        //Removing a customer from db by id
         public void Delete(int id)
         {
             db.RedbetCustomers.Remove(Find(id));
@@ -25,12 +28,14 @@ namespace MRG_HomeAssignment.Repo.Repo
         {
             db.Dispose();
         }
-
+        
+        //Finding a specific customer by id 
         public redbetCustomer Find(int id)
         {
             return db.RedbetCustomers.Find(id);
         }
 
+        //Adding a new customer
         public int Insert(redbetCustomer entity)
         {
             var existCust = Find(entity.Id);
@@ -54,7 +59,8 @@ namespace MRG_HomeAssignment.Repo.Repo
         {
             db.SaveChanges();
         }
-
+        
+        //Updating customer
         public void Update(redbetCustomer entity)
         {
             var existCust = Find(entity.Id);

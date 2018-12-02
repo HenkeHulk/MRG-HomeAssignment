@@ -12,6 +12,7 @@ namespace MRG_HomeAssignment.WebUI.Helper
     {
         MrgreenCustomerRepo repo = new MrgreenCustomerRepo();
 
+        //Register new customer and converting from viewmodel to domain model, returns int to redirect to edit page after the new account is created
         public int Register(MrgreenCustomerViewModel model)
         {
             var dbCustomer = new mrgreenCustomer()
@@ -27,6 +28,7 @@ namespace MRG_HomeAssignment.WebUI.Helper
             return repo.Insert(dbCustomer);
         }
 
+        //Updating customer and converting from viewmodel to domain model
         public void Update(MrgreenCustomerViewModel model)
         {
             var dbCustomer = new mrgreenCustomer()
@@ -42,11 +44,13 @@ namespace MRG_HomeAssignment.WebUI.Helper
             repo.Update(dbCustomer);
         }
 
+        //delete customer
         public void Delete(int id)
         {
             repo.Delete(id);
         }
 
+        //Finds a specific customer from db and converting to viewmodel
         public MrgreenCustomerViewModel FindById(int id)
         {
             var dbCust = repo.Find(id);
@@ -63,6 +67,7 @@ namespace MRG_HomeAssignment.WebUI.Helper
             return mrgCust;
         }
 
+        //Fetches list from db and converting to viewmodel
         public List<MrgreenCustomerViewModel> mrgreenCustomers()
         {
             var dbList = repo.All.ToList();

@@ -12,9 +12,11 @@ namespace MRG_HomeAssignment.Repo.Repo
     public class MrgreenCustomerRepo : IMrgreenCustomerRepository
     {
         UserContext db = new UserContext();
-
+        
+        //Returns list with all mr green customers
         public IQueryable<mrgreenCustomer> All => db.MrgreenCustomers;
 
+        //Removing a customer from db by id
         public void Delete(int id)
         {
             db.MrgreenCustomers.Remove(Find(id));
@@ -27,11 +29,13 @@ namespace MRG_HomeAssignment.Repo.Repo
             db.Dispose();
         }
 
+        //Finding a specific customer by id 
         public mrgreenCustomer Find(int id)
         {
             return db.MrgreenCustomers.Find(id);
         }
-
+        
+        //Adding a new customer
         public int Insert(mrgreenCustomer entity)
         {
             var existCust = Find(entity.Id);
@@ -56,6 +60,7 @@ namespace MRG_HomeAssignment.Repo.Repo
             db.SaveChanges();
         }
 
+        //Updating customer
         public void Update(mrgreenCustomer entity)
         {
             var existCust = Find(entity.Id);
